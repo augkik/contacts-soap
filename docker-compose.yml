@@ -1,0 +1,13 @@
+version: '3'
+services:
+  library:
+    build: ./library
+    command: java -jar target/library-1.0-SNAPSHOT-jar-with-dependencies.jar
+    ports:
+      - "80:80"
+    container_name: library
+  contacts:
+    build: ./contacts
+    command: java -jar target/app.jar --server.port=5000
+    ports:
+      - "5000:5000"
