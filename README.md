@@ -1,4 +1,4 @@
-#contacts-soap
+# contacts-soap
 Web service with contacts and a list of their borrowed books from library
 
 1. Clone git repository: git clone ```https://github.com/augkik/contacts-2.git```
@@ -7,7 +7,15 @@ Instructions:
 
 GET
 
-List of all contacts: /contacts
+List of all contacts:
+```<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://www.example.com/contacts">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <con:getContactsRequest>
+         <con:expand>?</con:expand>
+      </con:getContactsRequest>
+   </soapenv:Body>
+</soapenv:Envelope>```
 
 Contact with particular id: /contacts/<id>
 
