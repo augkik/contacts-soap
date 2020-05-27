@@ -100,7 +100,6 @@ public class SoapEndpoint {
         String bookStr;
         Gson gson = new Gson();
         JSONObject convertedObject;
-        System.out.println(contact.getBooks());
 
         for (String str : contact.getBooks()) {
             res = t.exchange("http://library:80/books/" + str, HttpMethod.GET, entity, String.class);
@@ -135,7 +134,6 @@ public class SoapEndpoint {
     @PayloadRoot(namespace = URI, localPart = "addContactRequest")
     @ResponsePayload
     public AddContactResponse addContact(@RequestPayload AddContactRequest request) {
-        System.out.println("Funkcija:1");
         AddContactResponse response = new AddContactResponse();
         ContactOnly c = request.getContact();
         Book book = request.getBook();
@@ -145,7 +143,6 @@ public class SoapEndpoint {
         int res = access.addContact(contact);
         //iff contact was added successfully, add book
 
-        System.out.println("Funkcija:2");
         if (book != null && res == 1) {
             JSONObject bookJson = new JSONObject();
             bookJson.put("ISBN", book.getIsbn());
@@ -157,9 +154,6 @@ public class SoapEndpoint {
             RestTemplate t = new RestTemplate();
             HttpEntity<JSONObject> entity = new HttpEntity(bookJson);
             access.deleteContact(c.getId());
-            System.out.println("Atspausdina: ");
-            System.out.println("Metai: " + book.getYear() + " ISBN: " + book.getIsbn() + " Autorius: " + book.getAuthor() + " Pavadinimas: " + book.getTitle());
-            System.out.println("Atspausdinta.");
             // if(book.getYear() != 0)
 
             boolean bookData = true;
