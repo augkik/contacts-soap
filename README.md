@@ -5,7 +5,7 @@ Web service with contacts and a list of their borrowed books from library
 2. Launch Web service: ```docker-compose up```
 Instructions:
 
-## GET
+### GET
 
 List of all contacts:
 ```
@@ -43,9 +43,7 @@ List of particular contact books:
 </soapenv:Envelope>
 ```
 
-List of all contacts with books: /contacts?expand=books
-
-PUT
+### PUT
 
 Update particular contact: /contacts/<id>
 
