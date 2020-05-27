@@ -88,9 +88,29 @@ Add new contact book:
 ```
 ### Remove
 
-Remove particular contact: /contacts/<id>
+Remove particular contact:
+```<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://www.example.com/contacts">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <con:deleteContactRequest>
+         <con:id>?</con:id>
+      </con:deleteContactRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+```
 
-Remove particular contact book: /contacts/<id>/books/<isbn>
+Remove particular contact book:
+```
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://www.example.com/contacts">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <con:deleteBookRequest>
+         <con:id>?</con:id>
+         <con:isbn>?</con:isbn>
+      </con:deleteBookRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+```
 
 ### Update
 
