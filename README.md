@@ -114,6 +114,39 @@ Remove particular contact book:
 
 ### Update
 
-Add new contact: /contacts body example: {"number": "", "surname": "", "name": "", "id": ,"email": "", "book": {"Pavadinimas": "", "Autorius": "","ISBN": "", "Metai":}}
+Update book:
+```
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://www.example.com/contacts">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <con:updateBookRequest>
+         <con:id>?</con:id>
+         <con:book>
+            <con:isbn>?</con:isbn>
+            <con:title>?</con:title>
+            <con:author>?</con:author>
+            <con:year>?</con:year>
+         </con:book>
+      </con:updateBookRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+```
+Update contact:
+```
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://www.example.com/contacts">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <con:updateContactRequest>
+         <con:id>?</con:id>
+         <con:contact>
+            <con:id>?</con:id>
+            <con:name>?</con:name>
+            <con:surname>?</con:surname>
+            <con:number>?</con:number>
+            <con:email>?</con:email>
+         </con:contact>
+      </con:updateContactRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+```
 
-Add new book: /contacts/<id>/books
