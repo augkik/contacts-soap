@@ -5,7 +5,7 @@ Web service with contacts and a list of their borrowed books from library
 2. Launch Web service: ```docker-compose up```
 Instructions:
 
-Wsdl file:
+WSDL file:
 ```/SoapContacts/contacts.wsdl```<br />
 Requests:
 ```/SoapContacts```
