@@ -1,8 +1,8 @@
 #contacts-soap
 Web service with contacts and a list of their borrowed books from library
 
-Clone git repository: git clone https://github.com/augkik/contacts-2.git
-Launch Web service: docker-compose up
+1. Clone git repository: git clone ```https://github.com/augkik/contacts-2.git```
+2. Launch Web service: ```docker-compose up```
 Instructions:
 
 GET
