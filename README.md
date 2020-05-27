@@ -12,26 +12,15 @@ Requests:
 
 ### Read
 
-List of all contacts:
+List of contacts:
 ```
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://www.example.com/contacts">
    <soapenv:Header/>
    <soapenv:Body>
       <con:getContactsRequest>
          <con:expand>?</con:expand>
-      </con:getContactsRequest>
-   </soapenv:Body>
-</soapenv:Envelope>
-```
-
-Contact with particular id:
-```
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://www.example.com/contacts">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <con:getContactRequest>
          <con:id>?</con:id>
-      </con:getContactRequest>
+      </con:getContactsRequest>
    </soapenv:Body>
 </soapenv:Envelope>
 ```
