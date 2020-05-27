@@ -6,8 +6,7 @@ Web service with contacts and a list of their borrowed books from library
 Instructions:
 
 Wsdl file:
-```/SoapContacts/contacts.wsdl```
-k
+```/SoapContacts/contacts.wsdl```<br />
 Requests:
 ```/SoapContacts```
 
