@@ -8,14 +8,16 @@ Instructions:
 GET
 
 List of all contacts:
-```<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://www.example.com/contacts">
+```
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://www.example.com/contacts">
    <soapenv:Header/>
    <soapenv:Body>
       <con:getContactsRequest>
          <con:expand>?</con:expand>
       </con:getContactsRequest>
    </soapenv:Body>
-</soapenv:Envelope>```
+</soapenv:Envelope>
+```
 
 Contact with particular id: /contacts/<id>
 
