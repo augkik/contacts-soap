@@ -5,7 +5,7 @@ Web service with contacts and a list of their borrowed books from library
 2. Launch Web service: ```docker-compose up```
 Instructions:
 
-GET
+## GET
 
 List of all contacts:
 ```
@@ -19,9 +19,29 @@ List of all contacts:
 </soapenv:Envelope>
 ```
 
-Contact with particular id: /contacts/<id>
+Contact with particular id:
+```
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://www.example.com/contacts">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <con:getContactRequest>
+         <con:id>?</con:id>
+      </con:getContactRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+```
 
-List of particular contact books: /contacts/<id>/books
+List of particular contact books:
+```
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://www.example.com/contacts">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <con:getContactBooksRequest>
+         <con:id>?</con:id>
+      </con:getContactBooksRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+```
 
 List of all contacts with books: /contacts?expand=books
 
